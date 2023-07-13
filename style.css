@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+}
+.head{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.para{
+    display: flex;
+    justify-content: space-between;
+}
+.personals{
+    margin-left: 20px;
+}
+.img{
+    height: 51mm;
+    width:  51mm;
+}

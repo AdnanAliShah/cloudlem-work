@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .info{
+            display: none;
+        }
+        .experiance{
+            display: none;
+        }
+        .skill{
+            display: none;
+        }
+        h3{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Resume</h1>
+        <form>
+          <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group col-md-6 mt-4">
+                    <form>
+                        <label for="fileUpload">Select a file:</label>
+                        <input type="file" id="fileUpload" name="fileUpload">
+                        <input type="submit" value="Upload">
+                    </form>
+                </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="dob">Date of Birth</label>
+              <input type="date" class="form-control" id="dob">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="cnic">CNIC</label>
+              <input type="text" class="form-control" id="cnic" placeholder="Enter your CNIC number">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter your address">
+          </div>
+    
+          <hr>
+    
+          <h3 class="mb-3">Education Information</h3>
+    
+          <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="degree">Degree 1</label>
+                    <input type="text" class="form-control" id="degree" placeholder="Enter your degree">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="Institute">Institute</label>
+                    <input type="text" class="form-control" id="institute" placeholder="Enter the institute's name">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="Start">Starts</label>
+                    <input type="date" class="form-control" id="start">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="End">Ends</label>
+                    <input type="date" class="form-control" id="end">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="GPA">CGPA</label>
+                    <input type="text" class="form-control" id="GPA" placeholder="Enter your CGPA">
+                </div>
+
+            </div>
+            <div id="info" class="info">
+                <!-- Existing content -->
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="degree2">Degree 2</label>
+                        <input type="text" id="degree2" class="form-control" placeholder="Enter your degree">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="institute2">Institute</label>
+                        <input type="text" id="institute2" class="form-control" placeholder="Enter the institute's name">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="start2">Starts</label>
+                        <input type="date" id="start2" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="End2">Ends</label>
+                        <input type="date" id="end2" class="form-control">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="GPA2">CGPA</label>
+                        <input type="text" id="GPA2" class="form-control" placeholder="Enter your CGPA">
+                    </div>
+                </div>                 
+            </div>
+                  <!-- Button to add more information -->
+                <button type="button" onclick="more()">More</button>
+
+                <hr>
+    
+                <h3 class="mb-3">Experiance</h3>
+                
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="Position">Position: </label>
+                        <input type="text" id="position" class="form-control" placeholder="Enter your position">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="organization">Organization</label>
+                        <input type="text" id="organization" class="form-control" placeholder="Enter the organization's name">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="started">Starts</label>
+                        <input type="date" id="started" class="form-control">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="Ended">Ends</label>
+                        <input type="date" id="ended" class="form-control">
+                    </div>
+                </div>    
+
+                <div id="experiance" class="experiance">
+                    <!-- Existing content -->
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="Position">Position: </label>
+                            <input type="text" id="position" class="form-control" placeholder="Enter your position">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" class="form-control" placeholder="Enter the organization's name">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="started">Starts</label>
+                            <input type="date" id="started" class="form-control">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="Ended">Ends</label>
+                            <input type="date" id="ended" class="form-control">
+                        </div>
+                    </div>                 
+                </div>
+
+                 <!-- Button to add more information -->
+                 <button type="button" onclick="experiance()">More</button>
+
+                 <hr>
+    
+                <h3 class="mb-3">Skills</h3>
+                <div class="form-row">
+                    <div class="form-group col-md">
+                        <label for="skills">Skills: </label>
+                        <input type="text" id="skills" class="form-control" placeholder="Enter your Skill">
+                    </div>
+                </div>
+                
+                <div id="skill" class="skill">
+                    <div class="form-row">
+                        <div class="form-group col-md">
+                            <label for="skill">Skills: </label>
+                            <input type="text" id="skill" class="form-control" placeholder="Enter your Skills">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Button to add more information -->
+
+                <button type="button" onclick="skill()">Add More</button>
+        </form>
+
+        <Div class="btn bg-secondary mt-5 ml-5">
+            <button type="button">Submit</button>
+        </Div>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">NAME</th>
+            <th scope="col">CNIC</th>
+            <th scope="col">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-target=""></td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    <script>
+       function more(){
+        var infoElement = document.getElementById("info");
+        if (infoElement.style.display == "none"){
+            infoElement.style.display = "block";
+        } else {
+            infoElement.style.display="none";
+        }
+       };
+       function experiance(){
+        var infoElement = document.getElementById("experiance");
+        if (infoElement.style.display == "none"){
+            infoElement.style.display = "block";
+        } else {
+            infoElement.style.display="none";
+        }
+       };
+       function skill(){
+        var infoElement = document.getElementById("skill");
+        if (infoElement.style.display == "none"){
+            infoElement.style.display = "block";
+        } else {
+            infoElement.style.display="none";
+        }
+       };
+    </script>
+</body>
+</html>
